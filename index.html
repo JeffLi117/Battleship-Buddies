@@ -4,17 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0", interactive-widget="resizes-content">
     <title>Battleships!</title> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Space+Grotesk&display=swap" rel="stylesheet">
   <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
   <body>
     <div id="content">
+      <div id="loader">
+        <div class="loading">
+        </div>
+      </div>
       <div class="sepPlayerContent" id="p1Seperator">
-        <div class="descriptor">P1's Board</div>
+        <div class="descriptor" id="topBar" >
+          <div>P1's Board</div>
+          <button type="button" id="newGameBtn">New Game</button>
+          <div id="axisToggle">vertical</div>
+          <div id="lengthIndicator">Length
+            <input type="number" id="lengthInput" min="1" max="4">
+          </div>
+          <div id="promptPlacingP1">Place your boats! Type in your ship length and toggle the axis with the button on the left!</div>
+        </div>
         <div class="gameboard P1" id="P1G"></div>
         <div class="descriptor">P1's Enemy Board</div>
         <div class="gameboard P1 target" id="P1T"></div>
       </div>
       <div class="sepPlayerContent" id="p2Seperator">
-        <div class="descriptor">P2's Board</div>
+        <div class="descriptor">
+          <div>P2's Board</div>
+        </div>
         <div class="gameboard P2" id="P2G"></div>
         <div class="descriptor">P2's Enemy Board</div>
         <div class="gameboard P2 target" id="P2T"></div>
